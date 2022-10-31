@@ -10,9 +10,9 @@ const AdventureIsle = {
     { name: "Sleeping under the stars" },
     { name: "Mokoro Safaris" },
     { name: "Meet the Mountain Gorillas" },
-    { name: "A Robinson Crusoe Beach Experience" }
-    { name: "Canoeing on Africa’s mighty rivers"}
-    { name: "Hot air ballooning" }
+    { name: "A Robinson Crusoe Beach Experience" },
+    { name: "Canoeing on Africa’s mighty rivers"},
+    { name: "Hot air ballooning" },
     { name: "Cultural Encounters" }
   ],
 
@@ -20,9 +20,9 @@ const AdventureIsle = {
     { name: "Strenuous Trekking" },
     { name: "Campsite-based Trekking" },
     { name: "Accommodation-based Trekking" },
-    { name: "Circuit Trekking" }
-    { name: "Mountain Trekking" }
-    { name: "Desert Trekking" }
+    { name: "Circuit Trekking" },
+    { name: "Mountain Trekking" },
+    { name: "Desert Trekking" },
     { name: "Forest Trekking" }
   ],
 
@@ -30,13 +30,13 @@ const AdventureIsle = {
     { name: "Road Races" },
     { name: "Stage races or Tours" },
     { name: "Criterium" },
-    { name: "Time Trials" }
-    { name: "Mountain Bike Racing" }
-    { name: "BMX (Bicycle Motorcross)" }
-    { name: "Track Cycling" }
-    { name: "Cycle Speedway" }
-    { name: "Mountain Bike Trials" }
-    { name: "Cycle Polo" }
+    { name: "Time Trials" },
+    { name: "Mountain Bike Racing" },
+    { name: "BMX (Bicycle Motorcross)" },
+    { name: "Track Cycling" },
+    { name: "Cycle Speedway" },
+    { name: "Mountain Bike Trials" },
+    { name: "Cycle Polo" },
     { name: "Artistic Cycling" }
   ],
 
@@ -65,22 +65,22 @@ const AdventureIsle = {
   ]
 };
 
-const adventurelist = Object.keys(AdventureIsle);
+const adventureTypeList = Object.keys(AdventureIsle);
 
 export default function App() {
-  const [selectedadventureType, setadvetureType] = useState("Adventurous");
+  const [selectedAdventureType, setAdventureType] = useState("Safari");
   function adventureTypeButtonHandler(adventureType) {
     setAdventureType(adventureType);
   }
   const mystyle = {
     listStyleType: "none"
   };
-
+ 
   return (
     <div className="App">
-      <h1>🏞️⛰️🏔️🧗🏽🚵🗻 Let the Adventure Begin 🏜️🌏🏝️🥾🚢🧳 </h1>
+      <h1>🧗🏽Let the Adventure Begin 🚵 </h1>
 
-      <p>Don't know where to go?  Just Wing It..!! </p>
+      <p>Don't know where to go? Just Wing it ! </p>
 
       {adventureTypeList.map((adventureType) => {
         return (
@@ -97,10 +97,10 @@ export default function App() {
 
       <div>
         <ul style={mystyle}>
-          {AdventureIsle[selectedadventureType].map((adventureType) => {
+          {AdventureIsle[selectedAdventureType].map((AdventureType) => {
             return (
               <li>
-                <div>{adventureType.name}</div>
+                <div>{AdventureType.name}</div>
               </li>
             );
           })}
